@@ -1,0 +1,406 @@
+﻿
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:fb="https://ogp.me/ns/fb#">
+<head>
+<title>Japanese Translator | RomajiDesu!!</title>
+<meta property="title" content="Japanese Translator | RomajiDesu"/>
+<meta name="description" content="This Japanese to Romaji and English Translator translates a Japanese/Kanji Paragraph
+            into Romaji, English and decomposes the sentences into different part of speech by a morphological analysis" />
+<meta property="og:description" content="Japanese, English, translator, translate, Kanji, Romaji, Kana, Hiragana,ひらがな, Katakana,カタカナ,ローマ字, convert, converter, tokenizer, morphological analysis"/>
+<meta name="keywords" content="Japanese, English, translator, translate, Kanji, Romaji, Kana, Hiragana,ひらがな, Katakana,カタカナ,ローマ字, convert, converter, tokenizer, morphological analysis"/>
+<meta name="author" content="Bui Hoang Hai"/>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<meta http-equiv="content-language" content="en"/>
+<link rel="alternate" href="http://m.romajidesu.com/translator/" /><meta property="og:image" content="https://www.romajidesu.com/images/R_500.png"/>
+<link rel="stylesheet" href="https://www.romajidesu.com/css/style.css?v=4.1"/>
+<script type="text/javascript" src="https://www.romajidesu.com/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">romajidesu='https://www.romajidesu.com';</script>
+<script type="text/javascript" src="https://www.romajidesu.com/js/romajidesu.js"></script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-714NZT0M0H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-714NZT0M0H');
+</script>
+
+
+<!---->
+<script src="https://cmp.uniconsent.com/v2/stub.min.js"></script>
+<script async src="https://cmp.uniconsent.com/v2/64837ab63b/cmp.js"></script>
+<script type="text/javascript">
+window.googletag = window.googletag || {};
+window.googletag.cmd = window.googletag.cmd || [];
+window.googletag.cmd.push(function () {
+    window.googletag.pubads().enableAsyncRendering();
+    window.googletag.pubads().disableInitialLoad();
+});
+(adsbygoogle = window.adsbygoogle || []).pauseAdRequests = 1;
+</script>
+<script>
+__tcfapi("addEventListener", 2, function(tcData, success) {
+    if (success && tcData.unicLoad  === true) {
+        if(!window._initAds) {
+            window._initAds = true;
+            var script = document.createElement('script');
+            script.async = true;
+            script.src = '//dsh7ky7308k4b.cloudfront.net/publishers/RomajiDesucom_new.min.js';
+            document.head.appendChild(script);
+			
+			var script = document.createElement('script');
+            script.async = true;
+            script.src = '//pubgalaxy-com.videoplayerhub.com/gallery.js';
+            document.head.appendChild(script);
+			
+			var script = document.createElement('script');
+            script.async = true;
+            script.src = 'https://dsh7ky7308k4b.cloudfront.net/smartview/RomajiDesucom_inview_search.min.js';
+            document.head.appendChild(script);
+
+        }
+    }
+});
+</script>
+<!---->
+<script>
+(function waitCMP(){
+  var readyCMP;
+  if(!readyCMP && window['dataLayer']) {
+    window['dataLayer'].forEach(function(event) {
+      if(event['event'] === 'unic_data') {
+        readyCMP = 1;
+        if(event['LOC'] === 'EU') {
+        document.getElementById("unic-gdpr").style.display = 'block';
+        }
+        if(event['LOC'] === 'CA') {
+        document.getElementById("unic-ccpa").style.display = 'block';
+        }
+      }
+    });
+  } else {
+    setTimeout(waitCMP, 100);
+  }
+})();
+</script>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7086185667098339"
+     crossorigin="anonymous"></script>
+
+</head>
+<body>
+<!-- facebook plugins -->
+
+
+ <div id="page-wrapper">
+  <div id="header">
+   <div id="logo">
+       <a href="https://www.romajidesu.com">
+           <img src="https://www.romajidesu.com/css/images/romajidesu.png?v=4.1" alt="RomajiDesu - Japanese Dictionary & Translator!">
+       </a>
+   </div>
+
+   <!-- Romjai to Social link -->
+   <div id="social_links">
+   </div>  
+
+  </div>
+     
+  <div id="main-content">
+    <div id="top-nav">
+       <a href="https://www.romajidesu.com" >RomajiDesu</a> 
+       <a href="https://www.romajidesu.com/dictionary/" >Japanese Dictionary</a> 
+       <a href="https://www.romajidesu.com/kanji/" >Kanji Dictionary</a> 
+       <a href="https://www.romajidesu.com/translator/" class="selected">Japanese Translator<span>new!</span></a> 
+       <a href="https://www.romajidesu.com/romaji_kana/" >Rōmaji Converter<span>new!</span></a> 
+    </div><div style="clear: both"></div>
+     
+    <div style="text-align:center;padding:10px">
+
+    
+    </div>
+ 
+    <style>
+    #kana_form {margin: 10px 0; }
+    .romaji{
+       width: 580px;height: 100px;margin: 5px 5px;font-size: 150%;
+    }
+    .res_translated{
+        width: 560px;font-size: 150%;
+        padding:10px;margin: 10px;
+        background: white;
+        border: 5px solid #eee;
+        border-radius: 6px;
+        box-shadow: 1px 1px 3px #aaa;
+        color: #444;
+        clear: both;
+    }
+    #res_tab {float:right; margin:-15px 5px 0 0;}
+    #res_tab a {
+        display: inline-block;float:right; padding:5px 30px;cursor: pointer;
+        font-weight: bold;text-decoration: none;
+        border-top-left-radius:5px; border-top-right-radius:5px;
+        border:1px solid #eee;
+        color: gray; background: linear-gradient(to bottom, #eee 0%,#ddd 100%);        
+    }    
+     #res_tab a:hover, #res_tab a.selected {
+         color: black; background: linear-gradient(to bottom, #fff 0%,#eee 100%);  
+     }
+     
+    .res_japanese a,.res_japanese span{
+        border-bottom: 4px solid #ddd;
+        display: inline-block;margin:1px;
+        position: relative;
+        text-decoration: none;
+    }
+    .res_japanese a{color:#333}
+    .res_japanese span {border: none;}
+    .res_japanese a:hover{
+        border-bottom: 4px solid orange;
+    }
+    .res_japanese .k_tooltip {bottom: 40px;left:-30px;width:500px;} 
+    .res_japanese span:hover .k_tooltip, .res_japanese a:hover .k_tooltip {display: block} 
+    .k_tooltip em {font-weight: normal}
+    .k_tooltip li {font-size: 110%;}
+    .k_tooltip span {text-decoration: none;color:black}
+    .res_romaji span{display: inline-block;}
+    .pos_particle {color:#00a5f0}
+    a.pos_verb,.pos_verb {color:#800}
+    a.pos_noun,.pos_noun {color:#000}    
+    .pos_auxiliary_verb,.pos_auxiliary{margin-left: -6px;}
+    
+    #res_english {position: relative}
+    #res_english i{display: none}
+    #res_english b {color:#444;font-weight:normal}
+    #res_english b:hover {color: darkorange}
+    
+    #left_column{width: 640px;float:left;padding-bottom: 10px;text-align:center;}
+    #right_column{width: 336px;float:right;margin-right: 20px;padding-top:25px}
+    .tips {background:#def; padding: 2px 10px;box-shadow: 1px 1px 2px #aaa;}
+
+</style>    
+
+<div id="left_column">
+   <div style="margin:20px;text-align: left">
+    <h2>Type/paste Japanese sentence here:</h2>
+    <form id="kana_form" action="https://www.romajidesu.com/translator" method="POST">
+        <input type="hidden" name="m" value="converters">
+        <input type="hidden" name="a" value="kanji_romaji">
+        <textarea id="japanese_input" name="k" class="romaji"></textarea>
+        <br><input type="submit" class="convert_button" value="Translate Now">
+    </form>    
+    
+        
+   </div>
+</div>
+<div id="right_column">
+    <h1>RomajiDesu Japanese translator</h1>    
+    <div>
+     <p>Type or paste a <strong>Japanese</strong> sentence/paragraph <br/>(<u>not</u> Romaji) in the text area and click "Translate Now".
+     </p>    
+     <p>RomajiDesu's Japanese  translator is both <strong>Japanese/Kanji to Romaji</strong> and <strong>Japanese/Kanji to English</strong> translator, which is very useful for analysis and study Japanese.
+     It's also useful for beginner to know how to pronounce a Japanese sentence.</p> 
+     <p>The translator uses the <strong><a target="_blank" href="https://mecab.googlecode.com/svn/trunk/mecab/doc/index.html">Mecab</a> morphological analyzer</strong> with 
+      that decomposes Japanese sentences into different components with detailed word types, based forms, and pronunciation. The Japanese paragraph is translated into English or other languages by Google Translate Service. 
+     </p>
+     <p>If you have any suggestion, please post it on <a href="https://www.facebook.com/RomajiDesu">RomajiDesu's facebook page</a>.
+     </p>
+     
+         </div>    
+</div>
+
+<div style="clear:both"></div>
+
+<script src="https://code.responsivevoice.org/responsivevoice.js"></script>
+
+
+<script type="text/javascript">
+var ja;
+var response;
+var ja_comp;
+var en_comp
+var n_sentences
+var n_trans
+$(document).ready(function(){  
+  ja=$('#japanese_input').val();  
+  ja = ja.replace(/\n/g,'<br/>');
+  ja_comp=ja.split(/[\.。]/g)
+  en_comp=ja_comp
+  n_trans=0
+  n_sentences = ja_comp.length;
+    for (var i = 0; i < n_sentences; i++) {
+    translate_sentence(i,ja_comp[i])
+  }
+  //if (ja!='') do_translate1(); 
+  //if (ja!='') do_g_translate();
+  $('#japanese_input').focus();    
+        $('#show_kana').mouseover(function(){
+             $('#show_kana').addClass('selected'); $('#show_romaji').removeClass('selected');
+             $('#res_romaji').hide();$('#res_kana').show();
+        });
+        $('#show_romaji').mouseover(function(){
+             $('#show_romaji').addClass('selected'); $('#show_kana').removeClass('selected');
+             $('#res_kana').hide();$('#res_romaji').show();
+        });
+
+   $('.loadmeaning').mouseover(function(){
+       var count = $(this).attr('count');
+       var search = $(this).attr('bf');
+       //Check if meaning is loaded
+       var meaning=$('#meaning-'+count).html();
+       if (meaning==''){
+           load_meaning(search,count)
+       }
+   });
+
+});
+  
+  
+function do_g_translate(){
+    var url='https://translate.googleapis.com/translate_a/single?client=gtx&dt=t'
+    var form_data={q:ja,sl:'ja',tl:'en'};
+    var ajax = $.ajax({
+    type: "POST",url:url,dataType:'json',data:form_data,
+    error: function (xhr, ajaxOptions, thrownError) {console.log("Error: "+xhr.status+':'+thrownError);fetched();}
+    });
+    ajax.done(function( data ) {
+        console.log(data[0][0][0]);
+        $('#res_english').html(data[0][0][0]);
+    });     
+}
+
+function translate_sentence(i,sentence){
+    var url='https://translate.googleapis.com/translate_a/single?client=gtx&dt=t'
+    var form_data={q:sentence,sl:'ja',tl:'en'};
+    var ajax = $.ajax({
+    type: "POST",url:url,dataType:'json',data:form_data,
+    error: function (xhr, ajaxOptions, thrownError) {console.log("Error: "+xhr.status+':'+thrownError);fetched();}
+    });
+    ajax.done(function( data ) {
+        //console.log("data",data[0][0][0]);
+        en=data[0][0][0];
+        en_comp[i]=en
+        n_trans=n_trans+1
+        //if (n_trans==n_sentences){
+           //console.log('done')
+           en_para=en_comp.join(". ")
+           $('#res_english').html(en_para);
+	//}       
+    });
+}
+
+function do_translate1(){
+    var d = new Date();var n = d.getDate();
+    if (n<=15){
+       var url='https://www.romajidesu.com/ajax.php';        
+    }else{
+       var url='http://www.hmovnu.com/mtranslate.php';        
+    }
+    
+    var form_data={m:'converters',a:'translate',text:ja};
+    var ajax = $.ajax({
+    type: "GET",url:url,dataType:'json',data:form_data,
+    error: function (xhr, ajaxOptions, thrownError) {console.log("Error: "+xhr.status+':'+thrownError);fetched();}
+    });
+    ajax.done(function( data ) {
+        console.log(data);
+        $('#res_english').html(data[0]);
+    });
+        
+}
+
+function load_meaning(search,count){
+    console.log('searching '+search+','+count);
+    $('#meaning-'+count).html('Loading...');
+    $.ajax({
+      url: 'https://www.romajidesu.com/ajax.php',
+      data: { m:'dictionary',a:'lookup_meaning',w: search},
+      dataType:'json',
+      success: function(data) {
+        if (!data.success) return false;
+        
+        var html="";
+        for (var id in data.result){
+            var item=data.result[id];
+            
+
+            console.log(item['word']);
+            var meaning=item['meaning'].join('/');
+            var reading=item['reading'];
+            console.log(meaning);
+            html+='<li><b>'+item['word']+'</b>('+reading+')<span>'+meaning+'</span></li>';
+        }
+        $('#meaning-'+count).html(html);
+      } 
+    });
+
+}
+
+$(".j_listen").click(function(){
+        var w = $(this).closest('.j_listen').data('w');
+        var j=decodeURIComponent(w)
+        console.log(w+'-> '+j);
+        responsiveVoice.speak(j,'Japanese Female');
+        return false;  
+    });
+    
+</script>
+
+
+ 
+        <div style="text-align:center;padding:10px">
+    <!-- TAGNAME: 728x90_bottom -->
+    <!-- /8095840/.2_A.37708.3_RomajiDesu.com_tier1 -->
+    <div id='div-gpt-ad-RomajiDesucom37708'>
+    </div>
+
+    </div>
+     
+    <div id="bottom-links">
+        <a href="https://www.romajidesu.com/content/contact.html">Contact us</a> |
+        <a href="https://www.facebook.com/RomajiDesu" rel="nofollow">Romajidesu on Facebook</a> | 
+        <a href="https://m.romajidesu.com">Mobile version</a> | 
+        <a href="https://www.romajidesu.com/content/about.html">About</a> | 
+        <a href="https://www.romajidesu.com/content/dictionary_code.html">Dictionary codes</a> | 
+        <a href="https://www.romajidesu.com/content/privacy.html">Privacy</a> | 
+        <a href="https://www.romajidesu.com/content/links.html">Links</a>  
+        <p>
+        <a id='unic-gdpr' onclick='__tcfapi("openunic");return false;' style='display:none;cursor:pointer;'>Change Ad Consent</a>
+        <a id='unic-ccpa' onclick="window.__uspapi('openunic')" style='display:none;cursor:pointer;'>Do not sell my data</a>
+        </p>
+    </div>
+
+
+  </div><!--main content-->
+
+  <div id="footer">
+      &copy; 2012-2022 RomajiDesu. Version 4.2 (2022 Jan.)  by Haibuihoang
+      <br/>(0.00056s)
+      <div style="font-size: 80%;">
+    A major part of the database uses data from 
+    <a  rel="nofollow" href="https://www.edrdg.org/edrdg/licence.html" target="new">EDRD Group</a>, Monash University. 
+    <br>Kanji Strokes orders diagrams are generated from <a  rel="nofollow" href="https://kanjivg.tagaini.net/">KanjiVG</a> data. 
+    <br><a href="https://responsivevoice.org">ResponsiveVoice-NonCommercial</a> licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/"><img title="ResponsiveVoice Text To Speech" src="https://responsivevoice.org/wp-content/uploads/2014/08/95x15.png" alt="95x15" width="95" height="15" /></a>
+    <br>Please refer to <a href="https://www.romajidesu.com/content/about.html#data">Data sources and copyright information</a> for more details! 
+    </div>
+  </div>
+ 
+ </div><!--page wrapper-->
+ 
+
+<a id="scroll-top" href="#logo"><b>Back to top</b></a>   
+
+
+ 
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=86721380858";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+</body>
+</html>
+

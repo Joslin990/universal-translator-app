@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://aka.ms https://cdn.jsdelivr.net https://speech.azure.com; style-src 'self'; img-src 'self' data: https:; connect-src 'self' https://translate.googleapis.com https://api.mymemory.translated.net https://api.allorigins.win; form-action 'self' https://www.romajidesu.com; object-src 'none'; base-uri 'self'; upgrade-insecure-requests">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Universal Translator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+<body>
+    <div class="hero-banner">
+        <img src="images/banner.jpg" alt="Banner Image">
+        <h1>A Universal Translator for All Languages</h1>
+    </div>
+    <div class="container">
+        <p>Select a language:</p>
+        <select for="language" id="language">
+            <option value="english">English</option>
+            <option value="spanish">Spanish</option>
+            <option value="french">French</option>
+            <option value="german">German</option>
+            <option value="chinese">Chinese</option>
+            <option value="japanese">Japanese</option>
+            <option value="arabic">Arabic</option>
+            <option value="hindi">Hindi</option>
+            <option value="russian">Russian</option>
+            <option value="portuguese">Portuguese</option>
+        </select>
+        <p>Enter text to translate:</p>
+        <textarea id="inputText" rows="4" cols="50"></textarea>
+        <button id="translateButton">Translate</button>
+        <h2>Translated Text:</h2>
+        <textarea id="outputText" rows="4" cols="50" readonly></textarea>
+        <button id="speakButton" type="button" style="margin-top:8px;">🔊 Speak</button>
+        <p>Translation resources:</p>
+        <div class="resource-links">
+            <a id="googleTranslateLink" href="https://translate.google.com" target="_blank" rel="noopener noreferrer">Google Translate</a>
+            <a id="urbanDictionaryLink" href="https://www.urbandictionary.com" target="_blank" rel="noopener noreferrer">Urban Dictionary</a>
+            <a id="languageDictionaryLink" href="https://en.wiktionary.org" target="_blank" rel="noopener noreferrer">Dictionary (Language-Specific)</a>
+            <a id="romajiDesuLink" href="https://www.romajidesu.com/translator/" target="_blank" rel="noopener noreferrer">RomajiDesu (Japanese Romaji)</a>
+        </div>
+        <form id="romajiDesuForm" action="https://www.romajidesu.com/translator" method="POST" target="_blank" hidden>
+            <input type="hidden" name="m" value="converters">
+            <input type="hidden" name="a" value="kanji_romaji">
+            <input type="hidden" id="romajiDesuText" name="k" value="">
+        </form>
+        <!-- ResponsiveVoice JS for free TTS (branding, usage limits) -->
+        <script src="https://code.responsivevoice.org/responsivevoice.js?key=free"></script>
+        <!-- Azure Speech SDK -->
+        <script src="https://aka.ms/csspeech/jsbrowserpackageraw"></script>
+        <!-- Main site script -->
+        <script src="script.js"></script>
+    </div>
+    <footer class="site-footer">
+        <p>&copy; 2024 Universal Translator. All rights reserved.</p>
+    </footer>
+</body>
+</html>
